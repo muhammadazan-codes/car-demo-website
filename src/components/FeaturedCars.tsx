@@ -12,7 +12,7 @@ interface Car {
 }
 
 const cars: Car[] = [
-  { id: "corolla", name: "Toyota Corolla Altis 1.6", year: 2024, type: "Sedan", description: "A dependable daily sedan with balanced comfort and efficiency.", specs: ["Automatic", "Petrol", "1.6L"], price: "PKR 7,200,000 (demo)", image: "https://images.unsplash.com/photo-1549924231-f129b911e442?w=900&q=80" },
+  { id: "corolla", name: "Toyota Corolla Altis 1.6", year: 2024, type: "Sedan", description: "A dependable daily sedan with balanced comfort and efficiency.", specs: ["Automatic", "Petrol", "1.6L"], price: "PKR 7,200,000 (demo)", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdCvOBZBQGaulGvAVFXHhBm96cURw27e9b4y5-se-lHg&s=10" },
   { id: "civic", name: "Honda Civic Oriel", year: 2024, type: "Sedan", description: "Sporty styling with a refined cabin and confident road presence.", specs: ["CVT", "Petrol", "1.5L Turbo"], price: "PKR 8,400,000 (demo)", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=900&q=80" },
   { id: "swift", name: "Suzuki Swift GLX CVT", year: 2024, type: "Hatchback", description: "Compact agility with modern features for city driving.", specs: ["CVT", "Petrol", "1.2L"], price: "PKR 4,300,000 (demo)", image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&q=80" },
   { id: "yaris", name: "Toyota Yaris ATIV X", year: 2024, type: "Sedan", description: "Practical size, efficient performance, and everyday reliability.", specs: ["CVT", "Petrol", "1.3L"], price: "PKR 5,100,000 (demo)", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&q=80" },
@@ -24,7 +24,7 @@ export function FeaturedCars() {
   const [selected, setSelected] = useState<Car | null>(null)
 
   return (
-    <section id="cars" className="py-20 scroll-mt-24 bg-background">
+    <section id="cars" className="py-12 md:py-20 scroll-mt-24 bg-background ">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
           <p className="text-xs tracking-widest text-primary">OUR COLLECTION</p>

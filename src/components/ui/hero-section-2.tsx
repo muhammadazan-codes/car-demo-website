@@ -59,18 +59,18 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         id="home"
         ref={ref}
         className={cn(
-          "relative flex w-full min-h-screen flex-col scroll-mt-24 overflow-hidden bg-background text-foreground md:flex-row",
+          "relative flex w-full flex-col scroll-mt-24 overflow-hidden bg-background text-foreground md:flex-row md:min-h-screen",
           className
         )}
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-12 lg:w-3/5 lg:p-16">
+        <div className="flex w-full flex-col justify-between p-6 md:w-1/2 md:p-12 lg:w-3/5 lg:py-32 lg:px-16 md:gap-8">
             <div>
-                <motion.header className="mb-8" variants={itemVariants}>
+                <motion.header className="mb-8 md:mb-16" variants={itemVariants}>
                     {logo && (
-                        <img src={logo.url} alt={logo.alt} className="h-10 w-auto md:h-12" />
+                        <img src={logo.url} alt={logo.alt} className="h-10 w-auto md:h-12 md:-mt-24" />
                     )}
                 </motion.header>
 
@@ -93,7 +93,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         </div>
 
         <motion.div 
-          className="w-full min-h-[260px] bg-cover bg-center md:w-1/2 md:min-h-full lg:w-2/5"
+          className="w-full min-h-[200px] bg-cover bg-center md:w-1/2 md:min-h-full lg:w-2/5"
           style={{ 
             backgroundImage: "url(" + backgroundImage + ")",
           }}

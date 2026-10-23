@@ -19,7 +19,7 @@ export default function AboutSection() {
         <div className="relative">
           <div className="flex justify-between items-center mb-8 w-[85%] absolute lg:top-4 md:top-0 sm:-top-2 -top-3 z-10">
             <div className="flex items-center gap-2 text-xl">
-              <span className="text-red-500 animate-spin">\*</span>
+              <span className="text-red-500 animate-spin">*</span>
               <TimelineContent as="span" animationNum={0} timelineRef={heroRef} customVariants={revealVariants} className="text-sm font-medium text-gray-600 dark:text-muted-foreground">ABOUT ADNAN MOTORS</TimelineContent>
             </div>
           </div>

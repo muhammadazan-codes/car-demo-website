@@ -1,16 +1,19 @@
 import { ThemeProvider } from "./contexts/ThemeProvider"
 import { ThemeEffect } from "./components/ThemeEffect"
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton"
 import { NavBar } from "./components/ui/tubelight-navbar"
 import { HeroSection } from "./components/ui/hero-section-2"
 import { FeaturedCars } from "./components/FeaturedCars"
+import WhyChooseUs from "./components/WhyChooseUs"
+import Footer from "./components/Footer"
 import AboutSection from "./components/AboutSection"
 import { Home, Users, Settings, Car, Mail } from "lucide-react"
 
 const navItems = [
   { name: "Home", url: "#home", icon: Home },
   { name: "About", url: "#about", icon: Users },
-  { name: "Services", url: "#services", icon: Settings },
-  { name: "Cars", url: "#cars", icon: Car },
+  { name: "Cars", url: "#cars", icon: Settings },
+  { name: "services", url: "#services", icon: Car },
   { name: "Contact", url: "#contact", icon: Mail },
 ]
 
@@ -18,6 +21,7 @@ function App() {
   return (
     <ThemeProvider>
       <ThemeEffect />
+      <WhatsAppFloatingButton />
       <div className="min-h-screen bg-background text-foreground">
         <NavBar items={navItems} />
 
@@ -48,10 +52,14 @@ function App() {
             address: "123 Luxury Lane, Beverly Hills, CA",
           }}
         />
-
-        <FeaturedCars />
+<div className="">
+  <FeaturedCars />
+</div>
+        
+        <WhyChooseUs />
 
         <AboutSection />
+        <Footer />
       </div>
     </ThemeProvider>
   )
