@@ -23,7 +23,7 @@ export function WhatsAppFloatingButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact Adnan Motors on WhatsApp"
-        className="wa-float fixed top-[10px] right-[10px] z-[9999] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-[#128C7E] focus:ring-offset-2"
+        className="wa-float fixed bottom-[max(20px,env(safe-area-inset-bottom))] right-[max(16px,env(safe-area-inset-right))] z-[9999] md:top-[10px] md:right-[10px] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-[#128C7E] focus:ring-offset-2"
         style={{ animation: "whatsapp-float 3s ease-in-out infinite" }}
       >
         <svg

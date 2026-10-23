@@ -72,7 +72,7 @@ export function NavBar({ items, className }: NavBarProps) {
         </button>
         <button
           onClick={() => setMenuOpen((v) => !v)}
-          className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-muted/50 hover:bg-muted transition-colors"
+          className="md:hidden ml-auto flex items-center justify-center w-9 h-9 rounded-full bg-muted/50 hover:bg-muted transition-colors"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
