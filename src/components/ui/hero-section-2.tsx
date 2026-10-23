@@ -70,11 +70,11 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <div>
                 <motion.header className="mb-8 md:mb-16" variants={itemVariants}>
                     {logo && (
-                        <img src={logo.url} alt={logo.alt} className="h-10 w-auto md:h-12 md:-mt-24" />
+                        <img src={logo.url} alt={logo.alt} className="h-10 hidden w-auto md:h-12 md:block md:-mt-24 "/>
                     )}
                 </motion.header>
 
-                <motion.main variants={containerVariants}>
+                <motion.main variants={containerVariants} className='md:mt-8 mt-16'>
                     <motion.h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl" variants={itemVariants}>
                         {title}
                     </motion.h1>
