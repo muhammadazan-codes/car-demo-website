@@ -12,12 +12,12 @@ interface Car {
 }
 
 const cars: Car[] = [
-  { id: "corolla", name: "Toyota Corolla Altis 1.6", year: 2024, type: "Sedan", description: "A dependable daily sedan with balanced comfort and efficiency.", specs: ["Automatic", "Petrol", "1.6L"], price: "PKR 7,200,000 (demo)", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdCvOBZBQGaulGvAVFXHhBm96cURw27e9b4y5-se-lHg&s=10" },
-  { id: "civic", name: "Honda Civic Oriel", year: 2024, type: "Sedan", description: "Sporty styling with a refined cabin and confident road presence.", specs: ["CVT", "Petrol", "1.5L Turbo"], price: "PKR 8,400,000 (demo)", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=900&q=80" },
-  { id: "swift", name: "Suzuki Swift GLX CVT", year: 2024, type: "Hatchback", description: "Compact agility with modern features for city driving.", specs: ["CVT", "Petrol", "1.2L"], price: "PKR 4,300,000 (demo)", image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&q=80" },
-  { id: "yaris", name: "Toyota Yaris ATIV X", year: 2024, type: "Sedan", description: "Practical size, efficient performance, and everyday reliability.", specs: ["CVT", "Petrol", "1.3L"], price: "PKR 5,100,000 (demo)", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&q=80" },
-  { id: "sportage", name: "Kia Sportage AWD", year: 2024, type: "SUV", description: "Spacious SUV with all-wheel drive and bold design.", specs: ["Automatic", "Petrol", "2.0L"], price: "PKR 9,800,000 (demo)", image: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=900&q=80" },
-  { id: "tucson", name: "Hyundai Tucson", year: 2024, type: "SUV", description: "Modern SUV with premium comfort and advanced features.", specs: ["Automatic", "Petrol", "2.0L"], price: "PKR 10,200,000 (demo)", image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=900&q=80" },
+  { id: "corolla", name: "Sports Altis 1.6", year: 2024, type: "Sedan", description: "A dependable daily sedan with balanced comfort and efficiency.", specs: ["Automatic", "Petrol", "1.6L"], price: "PKR 7,200,000 (demo)", image:"car1.jpg" },
+  { id: "civic", name: "Nisan Oriel", year: 2024, type: "Sedan", description: "Sporty styling with a refined cabin and confident road presence.", specs: ["CVT", "Petrol", "1.5L Turbo"], price: "PKR 8,400,000 (demo)", image: "car2.jpg" },
+  { id: "swift", name: "Ferrary GLX CVT", year: 2024, type: "Hatchback", description: "Compact agility with modern features for city driving.", specs: ["CVT", "Petrol", "1.2L"], price: "PKR 4,300,000 (demo)", image: "car3.jpg" },
+  { id: "yaris", name: "Yaris ATIV X", year: 2024, type: "Sedan", description: "Practical size, efficient performance, and everyday reliability.", specs: ["CVT", "Petrol", "1.3L"], price: "PKR 5,100,000 (demo)", image: "car4.jpg" },
+  { id: "sportage", name: "Kia Sportage AWD", year: 2024, type: "SUV", description: "Spacious SUV with all-wheel drive and bold design.", specs: ["Automatic", "Petrol", "2.0L"], price: "PKR 9,800,000 (demo)", image: "car5.jpg" },
+  { id: "tucson", name: "Toyota Prado", year: 2024, type: "SUV", description: "Modern SUV with premium comfort and advanced features.", specs: ["Automatic", "Petrol", "2.0L"], price: "PKR 10,200,000 (demo)", image: "car6.jpg" },
 ]
 
 export function FeaturedCars() {

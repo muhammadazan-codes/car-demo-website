@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
-import { motion, type Variants } from 'framer-motion';
+import { motion, type Variants, useReducedMotion } from 'framer-motion';
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 interface HeroSectionProps {
@@ -20,7 +20,6 @@ interface HeroSectionProps {
     text: string;
     href: string;
   };
-  backgroundImage: string;
   contactInfo?: {
     website: string;
     phone: string;
@@ -30,7 +29,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
-  ({ className, logo, title, subtitle, callToAction, secondaryCallToAction, backgroundImage }, ref) => {
+  ({ className, logo, title, subtitle, callToAction, secondaryCallToAction }, ref) => {
+    const isReducedMotion = useReducedMotion();
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const entranceX = isMobile ? 120 : 240;
+
     const containerVariants: Variants = {
       hidden: { opacity: 0 },
       visible: {
@@ -70,7 +73,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <div>
                 <motion.header className="mb-8 md:mb-16" variants={itemVariants}>
                     {logo && (
-                        <img src={logo.url} alt={logo.alt} className="h-10 hidden w-auto md:h-12 md:block md:-mt-24 "/>
+                        <img src={logo.url} alt={logo.alt} className="h-10 hidden w-32 md:h-14 md:block md:-mt-26 "/>
                     )}
                 </motion.header>
 
@@ -92,15 +95,58 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             </div>
         </div>
 
-        <motion.div 
-          className="w-full min-h-[200px] bg-cover bg-center md:w-1/2 md:min-h-full lg:w-2/5"
-          style={{ 
-            backgroundImage: "url(" + backgroundImage + ")",
+        <motion.div
+          className="relative w-full min-h-[200px] md:w-1/2 md:min-h-full lg:w-1/2"
+          initial={
+            isReducedMotion
+              ? { x: 0, opacity: 1 }
+              : { x: entranceX, opacity: 0 }
+          }
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: isMobile ? 1.2 : 1.4,
+            ease: [0.25, 1, 0.5, 1] as const,
           }}
-          initial={{ clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }}
-          animate={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
-          transition={{ duration: 1.2, ease: "circOut" as const }}
         >
+          {/* Subtle smoke beneath the tyres, stays behind the car */}
+          <div className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none" aria-hidden="true">
+            {[
+              { left: "40%", bottom: 0, width: 64, height: 44, delay: "0s", duration: "5s" },
+              { left: "50%", bottom: 6, width: 50, height: 36, delay: "1.6s", duration: "5.4s" },
+              { left: "60%", bottom: 2, width: 40, height: 28, delay: "3.2s", duration: "5.8s" },
+            ].map((puff, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "absolute -translate-x-1/2 rounded-full blur-[22px] bg-zinc-600/30",
+                  isReducedMotion ? "opacity-50" : "",
+                )}
+                aria-hidden="true"
+                style={{
+                  left: puff.left,
+                  bottom: puff.bottom,
+                  width: puff.width,
+                  height: puff.height,
+                  animation: isReducedMotion
+                    ? undefined
+                    : `smokePuff ${puff.duration} ease-in-out infinite`,
+                  animationDelay: puff.delay,
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <img
+              src="/car image.png"
+              alt="Premium showcase car"
+              width={1672}
+              height={941}
+              style={{ aspectRatio: 1672 / 941 }}
+              className="max-w-full max-h-full object-contain"
+              loading="eager"
+            />
+          </div>
         </motion.div>
       </motion.section>
     );

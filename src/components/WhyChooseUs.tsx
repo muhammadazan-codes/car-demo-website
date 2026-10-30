@@ -21,9 +21,9 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Why Choose Adnan Motors?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Why Choose <span className="text-red-500">Black Diamond</span> Car Lab?</h2>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-            Discover the reasons customers consider Adnan Motors when looking for their next vehicle.
+            Discover the reasons customers consider Black Diamond Car Lab when looking for their next vehicle.
           </p>
         </motion.div>
 

@@ -56,4 +56,18 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  @keyframes smokePuff {
+    0% {
+      transform: translateX(-50%) translateY(0) scale(0.5);
+      opacity: 0;
+    }
+    45% {
+      opacity: 0.55;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-48px) scale(1.9);
+      opacity: 0;
+    }
+  }
 }

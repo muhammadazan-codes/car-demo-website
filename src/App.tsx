@@ -27,16 +27,16 @@ function App() {
 
         <HeroSection
           logo={{
-            url: "/adnanlogo.png",
+            url: "/logo carlab.png",
             alt: "Car Showroom Logo",
           }}
           title={
             <>
-              Find Your Next Car <br />
-              <span className="text-primary">with Confidence.</span>
+              Built to Stand Out.<br />
+              <span className="text-primary">Driven by Luxury.</span>
             </>
           }
-          subtitle="Explore quality vehicles, compare your options, and connect with our showroom to find the right car for you."
+          subtitle="Discover premium luxury cars and professionally modified machines that command attention. Explore exceptional vehicles, find your perfect match, and experience automotive excellence with Black Diamond Car Lab."
           callToAction={{
             text: "Explore Cars",
             href: "#cars",
@@ -45,7 +45,6 @@ function App() {
             text: "Contact Us",
             href: "#contact",
           }}
-          backgroundImage="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80"
           contactInfo={{
             website: "carshowroom.com",
             phone: "+1 (555) 123-4567",

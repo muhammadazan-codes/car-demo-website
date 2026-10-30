@@ -41,7 +41,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-lg font-bold text-foreground">ADNAN MOTORS</h3>
+            <h3 className="text-lg font-bold text-foreground">BLACK DIAMOND CAR LAB</h3>
             <p className="mt-3 text-sm text-muted-foreground">
               Your destination for exploring vehicles and finding the right car
               for your next journey. Our team is here to help you make an informed
@@ -86,12 +86,12 @@ export default function Footer() {
                   href="tel:+923258008111"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Call Us: +923258008111
+                  Call Us: +92 329 8868880
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/923258008111"
+                  href="https://wa.me/923298868880"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground transition-colors hover:text-primary"
